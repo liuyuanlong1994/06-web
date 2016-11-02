@@ -4,21 +4,19 @@ You can accept this assignment [here]().  It is due Wednesday November 9 at 1:30
 
 ## Make A Simple Website
 
-Make a small, professional website, using and adapting the example from class.  It can be about you, a topic, or balderdash.  But it should include:
+* Make a small, professional website, using and adapting the example from class.  It can be about you, a topic, or balderdash.  But it should include:
 
-* A picture
-* A table
-* At least three sections
-* A list (could be the nav bar)
-* A navigation bar, with links to sections
+  * A picture
+  * A table
+  * At least three sections
+  * A list (could be the nav bar)
+  * A navigation bar, with links to sections
 
-In WEBSITE: provide a link to your website as:
+* In WEBSITE: provide a link to your website as:
+  http://htmlpreview.github.io/?https://github.com/harris-ippp/hw-6-userid/blob/master/docs/index.html
+  where the second part is just the path to your file on GitHub.  Alternatively, 
 
-http://htmlpreview.github.io/?https://github.com/harris-ippp/hw-6-userid/blob/master/docs/index.html
-
-where the second part is just the path to your file on GitHub.  Alternatively, 
-
-Extra credit: Put your webpage on a server!  Follow the instructions [here](https://answers.uchicago.edu/page.php?id=15886) to create an account on home.uchicago.edu, and upload ([Mac](https://answers.uchicago.edu/page.php?id=15895)/[PC](https://answers.uchicago.edu/page.php?id=15893)) your website.  Name it `index.html`, the name that it is the automatic resoruce loaded at home.uchicago.edu/~your_user_id/.  Put _that_ in WEBSITE.
+* **Extra credit:** Put your webpage on a server!  Follow the instructions [here](https://answers.uchicago.edu/page.php?id=15886) to create an account on home.uchicago.edu, and upload ([Mac](https://answers.uchicago.edu/page.php?id=15895)/[PC](https://answers.uchicago.edu/page.php?id=15893)) your website.  Name it `index.html`, the name that it is the automatic resoruce loaded at home.uchicago.edu/~your_user_id/.  Put _that_ in WEBSITE.
 
 
 
@@ -58,10 +56,10 @@ So for any election, we can grab the low-level voting records really easily if w
   If you are reading this, make sure you understand the big picture, before you try to implement the steps.
   Otherwise the steps will be meaningless and confusing.
     * Search within the the source for the first election id, 44930.  It appears twice, once in a row ID and once in a link.  I think the row will be easier to use.
-    * Set up your `soup` as we did in class: make the `requests.get()`, save it, can parse it.
+    * Set up your `soup` as we did in class: make the `requests.get()`, save it, and parse it.
     * Grab all of the instances where the class is `election_item`, like `soup.find_all(tag_type, class_name)`, i.e., `soup.find_all("tr", "election_item")`.
     * Extract the IDs; split them on dashes to extract the numbers.
-    * Now, _within that same row_ `find()` the cell containing the year, using the same syntax as above.  Recall that `find()` yields the first instance, instead of the list.  What are the tag and the class, now?  
+    * Now, _within that same row_ `row.find()` the cell containing the year, using the same syntax as above.  Recall that `find()` yields the first instance, instead of the list.  What are the tag and the class, now?  
     * Grab the year using `.string` (or `.contents[0]`).
   </details>
 
