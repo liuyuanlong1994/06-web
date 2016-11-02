@@ -63,7 +63,7 @@ So for any election, we can grab the low-level voting records really easily if w
     * Grab the year using `.string` (or `.contents[0]`).
   </details>
 
-2. Loop over list from Part 1, use requests to download the CSV files from.
+2. Loop over your list from Part 1, and use requests to download the CSV files from.
    You will format them like so:
 
    ```
@@ -72,7 +72,8 @@ So for any election, we can grab the low-level voting records really easily if w
 
    Save your work in `e2.py` and commit your csv file for the 2012 election, naming it `2012.csv`.
 
-   Don't run parts 1 and 2 every time you do this part -- once it's downloaded leave it be!  We don't want to bother the Virginia Election site too much!
+   Don't run parts 1 and 2 every time you do this part -- once it's downloaded leave it be!
+   We don't want to bother the Virginia Election site too much!
 
    <details>
    <summary>Hints</summary>
@@ -103,7 +104,7 @@ So for any election, we can grab the low-level voting records really easily if w
      df.dropna(inplace = True, axis = 1)    # drop empty columns
      df["Year"] = 2004
      ```
-   * Write a for loop, saving up all of your dataframes in a list.  Then and `concat' them together.  You'll probably want just these columns:
+   * Write a for loop, saving up all of your dataframes (elections) in a list.  Then `concat' them together.  You'll probably want just these columns:
      ```
      ["Democratic", "Republican", "Total Votes Cast", "Year"]
      ```
