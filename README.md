@@ -80,6 +80,7 @@ So for any election, we can grab the low-level voting records really easily if w
    * Loop over a file using: `for line in open("ELECTION_ID"):`.
    * You can print the contents of the response using `resp.text`.
      Instead, write them to files (see slide 8 of [lecture 3B](https://github.com/harris-ippp/lectures/raw/master/03/files.pdf)) with a meaningful name structure:
+     
      ```
      file_name = year +".csv"
      with open(file_name, "w") as out:
