@@ -13,8 +13,14 @@ You can accept this assignment [here](https://classroom.github.com/assignment-in
   * A navigation bar, with links to sections
 
 * In WEBSITE: provide a link to your website as:
+
   http://htmlpreview.github.io/?https://github.com/harris-ippp/hw-6-userid/blob/master/docs/index.html
-  where the second part is just the path to your file on GitHub.  Alternatively, 
+
+  where the second part is just the path to your file on GitHub.  For instace, you could see the website from class like so:
+  
+  http://htmlpreview.github.io/?https://github.com/harris-ippp/lectures/blob/master/docs/index.html
+  
+  Alternatively, 
 
 * **Extra credit:** Put your webpage on a server!  Follow the instructions [here](https://answers.uchicago.edu/page.php?id=15886) to create an account on home.uchicago.edu, and upload ([Mac](https://answers.uchicago.edu/page.php?id=15895)/[PC](https://answers.uchicago.edu/page.php?id=15893)) your website.  Name it `index.html`, the name that it is the automatic resoruce loaded at home.uchicago.edu/~your_user_id/.  Put _that_ in WEBSITE.
 
