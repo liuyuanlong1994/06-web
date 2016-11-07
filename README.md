@@ -14,7 +14,7 @@ You can accept this assignment [here](https://classroom.github.com/assignment-in
 
 * In WEBSITE: provide a link to your website as:
 
-  http://htmlpreview.github.io/?https://github.com/harris-ippp/hw-6-userid/blob/master/docs/index.html
+  http://htmlpreview.github.io/?https://github.com/harris-ippp/hw-6-userid/blob/master/my_site.html
 
   where the second part is just the path to your file on GitHub.  For instace, you could see the website from class like so:
   
