@@ -111,7 +111,7 @@ So for any election, we can grab the low-level voting records really easily if w
      df.dropna(inplace = True, axis = 1)    # drop empty columns
      df["Year"] = 2004
      ```
-   * Write a for loop, saving up all of your dataframes (elections) in a list.  Then `concat' them together.  You'll probably want just these columns:
+   * Write a for loop, saving up all of your dataframes (elections) in a list.  Then `concat` them together.  You'll probably want just these columns:
      ```
      ["Democratic", "Republican", "Total Votes Cast", "Year"]
      ```
