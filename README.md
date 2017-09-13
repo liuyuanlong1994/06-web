@@ -1,4 +1,4 @@
-# Homework 6: Websites -- Making and Scraping
+# Homework 6: Making and Scraping Websites
 
 You can accept this assignment [here](https://classroom.github.com/assignment-invitations/66526f93dac8e6a95ed82fff64faad2b).  It is due Wednesday November 9 at 1:30am.
 
