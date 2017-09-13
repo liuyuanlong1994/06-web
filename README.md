@@ -15,7 +15,7 @@ You can accept this assignment [here](https://classroom.github.com/assignment-in
      1. [User, Organization, and Project Pages](https://help.github.com/articles/user-organization-and-project-pages/)
      2. [Configuring a publishing source for GitHub Pages](https://help.github.com/articles/configuring-a-publishing-source-for-github-pages/)
     
-    For either option, your main work should be in an index.html file.  You can load additional resources, etc. there as well.  You can also "hotlink" to other resources on the net.  (Generally this is bad practice, but we aren't expecting these sites to get enormous traffic.
+    For either option, your main work should be in an index.html file.  You can load additional resources, etc. there as well.  You can also "hotlink" to other resources on the net.  (Generally this is bad practice, but we aren't expecting these sites to get enormous traffic.)
   * For the University, follow the instructions [here](https://answers.uchicago.edu/page.php?id=15886) to create an account on home.uchicago.edu, and upload ([Mac](https://answers.uchicago.edu/page.php?id=15895)/[PC](https://answers.uchicago.edu/page.php?id=15893)) your website.  Name it `index.html`, the name that it is the automatic resoruce loaded at home.uchicago.edu/~your_user_id/.  Put _that_ in WEBSITE.
 * Wherever you end up putting your site, you should put a link in the "WEBSITE" file in this repo, so we know where to look.
 
