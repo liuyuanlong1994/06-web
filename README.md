@@ -52,7 +52,7 @@ So for any election, we can grab the low-level voting records really easily if w
    ```
    &nbsp;<details><summary>Hints, step by step.</summary>
    If you are reading this, make sure you understand the big picture, before you try to implement the steps.
-  Otherwise the steps will be meaningless and confusing.
+   Otherwise the steps will be meaningless and confusing.
      * Search within the the source for the first election id, 44930.  It appears twice, once in a row ID and once in a link.  I think the row will be easier to use.
      * Set up your `soup` as we did in class: make the `requests.get()`, save it, and parse it.
      * Grab all of the instances where the class is `election_item`, like `soup.find_all(tag_type, class_name)`, i.e., `soup.find_all("tr", "election_item")`.
@@ -60,10 +60,8 @@ So for any election, we can grab the low-level voting records really easily if w
      * Now, _within that same row_ `row.find()` the cell containing the year, using the same syntax as above.  Recall that `find()` yields the first instance, instead of the list.  What are the tag and the class, now?  
      * Grab the year using `.string` (or `.contents[0]`).
    </details>
-
 2. Loop over your list from Part 1, and use requests to download the CSV files from.
    You will format them like so:
-
    ```
    http://historical.elections.virginia.gov/elections/download/{}/precincts_include:0/
    ```
@@ -83,9 +81,7 @@ So for any election, we can grab the low-level voting records really easily if w
      with open(file_name, "w") as out:
        out.write(resp.text)
      ```
-  </details>
-
-
+   </details>
 3. Import your CSV files into a single `pandas.DataFrame()` and plot the Republican vote share in Accomack County as a fraction of Total Votes Cast.  Save your work as `e3.py` and commit your plot as `accomack.png`.
 
    &nbsp;<details><summary>Hints</summary>
@@ -106,7 +102,6 @@ So for any election, we can grab the low-level voting records really easily if w
      ["Democratic", "Republican", "Total Votes Cast", "Year"]
      ```
    * Then you just need to define a new column, Republican Share, and plot that against year.
-  </details>
-
+   </details>
 4. Extra Credit (this week -- will be required next week): put all of this into a function (or a sript, with options!!) so that you can select the county "on the fly."
 
