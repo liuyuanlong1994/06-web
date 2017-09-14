@@ -41,7 +41,7 @@ So for any election, we can grab the low-level voting records really easily if w
 
 ### Your Tasks
 
-1. Using BeautifulSoup ([docs](https://www.crummy.com/software/BeautifulSoup/bs4/doc/)), print, then save as ELECTION_ID, a list containing the years and election IDs in exactly this format.  Save (and commit) your work in `e1.py`.
+1. Using BeautifulSoup ([docs](https://www.crummy.com/software/BeautifulSoup/bs4/doc/)), print, then save as ELECTION_ID, a list containing the years and election IDs in exactly this format.  
    ```
    2016 80871
    2012 44930
@@ -50,7 +50,7 @@ So for any election, we can grab the low-level voting records really easily if w
    2000 39517
    ...  ...
    ```
-   &nbsp;<details><summary>Hints, step by step.</summary>
+   Save (and commit) your work in `e1.py`. &nbsp;<details><summary>Hints, step by step.</summary>
    If you are reading this, make sure you understand the big picture, before you try to implement the steps.
    Otherwise the steps will be meaningless and confusing.
      * Search within the the source for the first election id, 80871.  It appears twice, once in a row ID and once in a link.  I think the row will be easier to use.
@@ -69,9 +69,7 @@ So for any election, we can grab the low-level voting records really easily if w
    Save your work in `e2.py` and commit your csv file for the 2016 election, naming it `presidential_general_2016.csv`.
 
    Don't run parts 1 and 2 every time you do this part -- once it's downloaded leave it be!
-   We don't want to bother the Virginia Election site too much!
-
-   &nbsp;<details><summary>Hints</summary>
+   We don't want to bother the Virginia Election site too much! &nbsp;<details><summary>Hints</summary>
    * Loop over a file using: `for line in open("ELECTION_ID"):`.
    * You can print the contents of the response using `resp.text`.
      Instead, write them to files (see slide 8 of [lecture 3B](https://github.com/harris-ippp/lectures/raw/master/03/files.pdf)) with a meaningful name structure:
