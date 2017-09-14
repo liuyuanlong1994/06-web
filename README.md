@@ -4,7 +4,7 @@ You can accept this assignment [here](https://classroom.github.com/assignment-in
 
 ## Make A Simple Website
 
-* Make a small, professional website, using and adapting the example from class.  It can be about you, a topic, or balderdash.  But it should include:
+* Using and adapting the example from class, ake a small, professional website.  It can be about you, a topic, or balderdash.  But it should include:
   * A picture
   * A table
   * At least three sections
