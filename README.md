@@ -66,7 +66,7 @@ So for any election, we can grab the low-level voting records really easily if w
    http://historical.elections.virginia.gov/elections/download/{}/precincts_include:0/
    ```
 
-   Save your work in `e2.py` and commit your csv file for the 2016 election, naming it `presidential_general_2016.csv`.
+   Save your work in `e2.py` and commit your csv file for the 2016 election, naming it `president_general_2016.csv`.
 
    Don't run parts 1 and 2 every time you do this part -- once it's downloaded leave it be!
    We don't want to bother the Virginia Election site too much! &nbsp;<details><summary>Hints</summary>
