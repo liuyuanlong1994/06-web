@@ -80,12 +80,8 @@ So for any election, we can grab the low-level voting records really easily if w
        out.write(resp.text)
      ```
    </details>
-3. Import your CSV files into a single `pandas.DataFrame()` and plot the Republican vote share in Accomack County, Albermarle County, Alexandria City, and Alleghany County as a fraction of Total Votes Cast.  Save your work as `e3.py` and commit your plots as follows:
-   ```
-   accomack_county.pdf albemarle_county.pdf alexandria_city.pdf alleghany_county.pdf
-   ```
-
-   &nbsp;<details><summary>Hints</summary>
+3. Import your CSV files into a single `pandas.DataFrame()` and plot the Republican vote share in Accomack County, Albermarle County, Alexandria City, and Alleghany County as a fraction of Total Votes Cast.  Save your work as `e3.py` and commit your plots as:
+   `accomack_county.pdf`, `albemarle_county.pdf`, `alexandria_city.pdf`, and `alleghany_county.pdf`. &nbsp;<details><summary>Hints</summary>
    * The challenge is in the `read_csv()`: there are empty columns, and the 'relevant' column names (party names) are in the second row.  So you need to import that single row as a dictionary, to change the column names.  You can do the setup, like so
      ```
      header = pd.read_csv("president_general_2004.csv", nrows = 1).dropna(axis = 1)
