@@ -53,7 +53,7 @@ So for any election, we can grab the low-level voting records really easily if w
    &nbsp;<details><summary>Hints, step by step.</summary>
    If you are reading this, make sure you understand the big picture, before you try to implement the steps.
    Otherwise the steps will be meaningless and confusing.
-     * Search within the the source for the first election id, 44930.  It appears twice, once in a row ID and once in a link.  I think the row will be easier to use.
+     * Search within the the source for the first election id, 80871.  It appears twice, once in a row ID and once in a link.  I think the row will be easier to use.
      * Set up your `soup` as we did in class: make the `requests.get()`, save it, and parse it.
      * Grab all of the instances where the class is `election_item`, like `soup.find_all(tag_type, class_name)`, i.e., `soup.find_all("tr", "election_item")`.
      * Extract the IDs; split them on dashes to extract the numbers.
