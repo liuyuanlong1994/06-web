@@ -35,7 +35,7 @@ Under "Actions" on the left hand side, click on "Download this election."  Right
 
 http://historical.elections.virginia.gov/elections/download/44930/precincts_include:0/
 
-Again, it's pretty darn suggestive.  44930 is the election ID for the General Presiential Election in 2012.  Download the file.  It's a CSV!  
+Again, it's pretty darn suggestive.  80871 is the election ID for the General Presiential Election in 2016.  Download the file.  It's a CSV!  
 
 So for any election, we can grab the low-level voting records really easily if we know its ID!  Unfortunately, the IDs are not (as far as I can tell) neatly exposed.  But they _are_ contained in the search results.  You'll have to scrape them out.
 
@@ -43,11 +43,11 @@ So for any election, we can grab the low-level voting records really easily if w
 
 1. Using BeautifulSoup ([docs](https://www.crummy.com/software/BeautifulSoup/bs4/doc/)), print, then save as ELECTION_ID, a list containing the years and election IDs in exactly this format.  Save (and commit) your work in `e1.py`.
    ```
+   2016 80871
    2012 44930
    2008 39050
    2004 41055
    2000 39517
-   1996 34787
    ...  ...
    ```
    &nbsp;<details><summary>Hints, step by step.</summary>
@@ -66,7 +66,7 @@ So for any election, we can grab the low-level voting records really easily if w
    http://historical.elections.virginia.gov/elections/download/{}/precincts_include:0/
    ```
 
-   Save your work in `e2.py` and commit your csv file for the 2012 election, naming it `presidential_general_2012.csv`.
+   Save your work in `e2.py` and commit your csv file for the 2016 election, naming it `presidential_general_2016.csv`.
 
    Don't run parts 1 and 2 every time you do this part -- once it's downloaded leave it be!
    We don't want to bother the Virginia Election site too much!
@@ -82,7 +82,10 @@ So for any election, we can grab the low-level voting records really easily if w
        out.write(resp.text)
      ```
    </details>
-3. Import your CSV files into a single `pandas.DataFrame()` and plot the Republican vote share in Accomack County as a fraction of Total Votes Cast.  Save your work as `e3.py` and commit your plot as `accomack.png`.
+3. Import your CSV files into a single `pandas.DataFrame()` and plot the Republican vote share in Accomack County, Albermarle County, Alexandria City, and Alleghany County as a fraction of Total Votes Cast.  Save your work as `e3.py` and commit your plots as follows"
+   ```
+   accomack_county.pdf albemarle_county.pdf alexandria_city.pdf alleghany_county.pdf
+   ```
 
    &nbsp;<details><summary>Hints</summary>
    * The challenge is in the `read_csv()`: there are empty columns, and the 'relevant' column names (party names) are in the second row.  So you need to import that single row as a dictionary, to change the column names.  You can do the setup, like so
@@ -97,11 +100,13 @@ So for any election, we can grab the low-level voting records really easily if w
      df.dropna(inplace = True, axis = 1)    # drop empty columns
      df["Year"] = 2004
      ```
-   * Write a for loop, saving up all of your dataframes (elections) in a list.  Then `concat` them together.  You'll probably want just these columns:
+   * Write a for loop, placing up all of your dataframes (elections) in a list.  Then `concat` them together.  You'll probably want just these columns:
      ```
      ["Democratic", "Republican", "Total Votes Cast", "Year"]
      ```
-   * Then you just need to define a new column, Republican Share, and plot that against year.
+   * Then you just need to define a new column, Republican Share.
+   * You can either "select off" the column and plot the year, or you can [pivot](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.pivot.html) all of the city/county names up as columns, keeping the 
+     * If you do this, you may want to deal with the counties that were occasionally split between congressional districts, "(CD X)".  You could do this by fixing the labels with a regular expression.  Then group by County/City, take the sum, and reset the index.
    </details>
-4. Extra Credit (this week -- will be required next week): put all of this into a function (or a sript, with options!!) so that you can select the county "on the fly."
+
 
