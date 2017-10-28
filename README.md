@@ -59,6 +59,7 @@ So for any election, we can grab the low-level voting records really easily if w
      * Extract the IDs; split them on dashes to extract the numbers.
      * Now, _within that same row_ `row.find()` the cell containing the year, using the same syntax as above.  Recall that `find()` yields the first instance, instead of the list.  What are the tag and the class, now?  
      * Grab the year using `.string` (or `.contents[0]`).
+   
    Why is it that pandas is not well-suited to this task??
    </details>
 2. Loop over your list from Part 1, and use requests to download the CSV files from.
